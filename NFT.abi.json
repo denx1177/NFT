@@ -1,0 +1,112 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "setCreateFee",
+			"inputs": [
+				{"name":"_fee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"power","type":"uint256"},
+				{"name":"speed","type":"uint256"},
+				{"name":"health","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"tokenId","type":"uint256"}
+			]
+		},
+		{
+			"name": "changePrice",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeOwner",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"pubKeyOfNewOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenPrice",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenOwner",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenInfo",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"power","type":"uint256"},
+				{"name":"speed","type":"uint256"},
+				{"name":"health","type":"uint256"}
+			]
+		},
+		{
+			"name": "changePower",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"power","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_createFee",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_createFee","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"power","type":"uint256"},{"name":"speed","type":"uint256"},{"name":"health","type":"uint256"}],"name":"tokensArr","type":"tuple[]"},
+		{"name":"_createFee","type":"uint128"},
+		{"name":"tokenToOwner","type":"map(uint256,uint256)"},
+		{"name":"tokenToPrice","type":"map(uint256,uint256)"}
+	]
+}
